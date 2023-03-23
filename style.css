@@ -1,0 +1,142 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(178, 100%, 50%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue-main);
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  background-color: var(--dark-blue-card);
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 0.6rem;
+  margin: 1rem;
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image:hover::before {
+  content: '';
+  background-image: url('images/icon-view.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  background-color: hsla(178, 100%, 50%, 0.512);
+  position: absolute;
+  inset: 0;
+  border-radius: 0.6rem;
+}
+
+.hero-image img {
+  border-radius: 0.6rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+  color: var(--soft-blue);
+}
+
+h1 {
+  margin: 0.8rem 0;
+  cursor: pointer;
+  color: var(--white);
+}
+
+h1:hover {
+  color: var(--cyan);
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7rem 0;
+}
+
+.cyan-text,
+.time-text {
+  display: flex;
+  align-items: center;
+}
+
+.cyan-text {
+  color: var(--cyan);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cyan-text img,
+.time-text img {
+  margin-right: 0.4rem;
+}
+
+.card-line {
+  background-color: var(--soft-blue);
+  height: 0.5px;
+  width: 100%;
+  margin: 0.8rem 0;
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  margin-right: 0.7rem;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.profile-title {
+  display: flex;
+  align-items: center;
+}
+
+.profile-title h2 {
+  font-size: inherit;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.profile-title h2:hover {
+  color: var(--cyan);
+}
